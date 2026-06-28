@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner | 2025/B/CYB/0653</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Miva's <span>Ass.</span></a>
+
+       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Academic Planner</h1>
+      <p>Stay on top of your studies by managing your tasks here.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="planner-section">
+      <div class="container">
+        <div class="planner-wrapper">
+
+          <!-- Add Task Input -->
+          <div class="planner-input-card">
+            <h3>Add New Task</h3>
+            <div class="input-row">
+              <div>
+                <label>Task Name</label>
+                <input 
+                  type="text" 
+                  id="taskInput" 
+                  placeholder="e.g. Submit CSC 106 assignment"
+                />
+              </div>
+              <div>
+                <label>Priority</label>
+                <select id="prioritySelect">
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+              <div>
+                <label>Due Date</label>
+                <input 
+                  type="date" 
+                  id="dueDateInput"
+                />
+              </div>
+              <button class="btn-add" id="addTaskBtn">
+                + Add Task
+              </button>
+            </div>
+          </div>
+
+          <!-- Task Stats -->
+          <div class="task-stats">
+            <div class="task-stat">
+              <div class="num" id="statTotal">0</div>
+              <div class="lbl">Total</div>
+            </div>
+            <div class="task-stat">
+              <div class="num" id="statDone">0</div>
+              <div class="lbl">Completed</div>
+            </div>
+            <div class="task-stat">
+              <div class="num" id="statPending">0</div>
+              <div class="lbl">Pending</div>
+            </div>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="planner-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+          </div>
+
+          <!-- Task List -->
+          <div id="taskList" class="task-list"></div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;2026 <span>2025/B/CYB/0653</span> — CSC 106 Term Project | MIVA Open University</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
